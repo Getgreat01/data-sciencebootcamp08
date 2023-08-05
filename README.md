@@ -2,7 +2,7 @@
 My data portfolio for data science 
 
 
-## what this i learn from this boot camp 
+## what this I learn from this boot camp 
 
 i learn a lot of  stuff related to data science skills. this bootcamp
 
