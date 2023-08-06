@@ -1,0 +1,48 @@
+print("Hello welcome to paoyingchub game")
+
+HSP <- function() {
+  weapon <-c("P","S","H")
+  loss =0
+  win =0
+  draw =0
+  pick =""
+  
+  while(pick != "Q"){
+  print("Please choose weapon : P-Paper S-Scisor H-hammer or Q -for quite game")
+  pick <- readLines("stdin", n = 1)
+  botpick <- sample(weapon,1)  
+  if (pick == botpick)
+    {
+    draw <- draw +1
+    print("The game is draw")
+    }
+  else if (pick=="H" & botpick=="S")
+    {
+    win <- win+1
+     print("You win the game")
+    }
+  else if (pick=="S" & botpick=="P")
+    {
+    win <- win+1
+     print("You win the game")
+    }
+  else if (pick=="P" & botpick=="H")
+    {
+    win <- win+1
+     print("You win the game")
+    }
+  else if (pick=="Q")
+    {
+     print("The game is over")
+    break
+    }
+  else
+    {
+     loss <- loss+1
+     print("You loss the game")
+    }
+    print(paste("Your game  status so far : Win ", win, " Loss : ",loss,"   Draw :", draw, "from total game :",win+loss+draw))
+  }
+  
+}
+HSP()
