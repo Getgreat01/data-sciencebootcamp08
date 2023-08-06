@@ -1,0 +1,58 @@
+# Define the function
+add_two_numbers <- function(x, y) {
+  # Add the two numbers
+  sum <- x + y
+  # Return the sum
+  return(sum)
+}
+
+# Call the function
+result <- add_two_numbers(1, 3)
+
+# Print the result
+print(result)
+print("hello world")
+
+PizzaOrder <- function() {
+  # This function will take user input for a pizza order and return the order and cost.
+
+  # Print a welcome message and prompt the user for their customer ID.
+  print("Welcome to pizza order! Please enter your customer ID: ")
+  user_name <- readLines("stdin", n = 1)
+
+  # Print a welcome message and list of pizza options.
+  print("Welcome to Pizza customer id", user_name)
+  print("Please choose one pizza number in this list.")
+  pizza <- c("1:Hawaiian", "2:Chicken Trio", "3:Super Deluxe", "4:Seafood Cocktail")
+  print(pizza)
+
+  # Read the user's pizza choice and convert it to a number.
+  pizza <- readLines("stdin", n = 1)
+  pizza <- as.numeric(pizza)
+
+  # Check the user's pizza choice and set the price accordingly.
+  if (pizza == 1) {
+    pizza <- "1:Hawaiian"
+    price <- 220
+  } else if (pizza == 2) {
+    pizza <- "2:Chicken Trio"
+    price <- 180
+  } else if (pizza == 3) {
+    pizza <- "3:Super Deluxe"
+    price <- 170
+  } else if (pizza == 4) {
+    pizza <- "4:Seafood Cocktail"
+    price <- 250 + 20
+  } else {
+    pizza <- "You entered a wrong number. Please order again or order later."
+    price <- 0
+  }
+
+  # Print the order and cost.
+  print(paste("Your order is ", pizza, " with cost ", price))
+}
+
+PizzaOrder()
+
+##userinput <- readLines("stdin",n=1)
+##print(userinput)
